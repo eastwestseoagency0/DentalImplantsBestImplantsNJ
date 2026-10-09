@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Implants | Best Implants NJ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0056b3;
+      --primary-hover: #003d82;
+      --accent: #00a896;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .logo-brand img {
+      height: 50px;
+      width: auto;
+      border-radius: 6px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .header-cta {
+      background-color: var(--primary);
+      color: #ffffff !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .header-cta:hover {
+      background-color: var(--primary-hover);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+      color: var(--text-muted);
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--text-dark);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Sections */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
+      color: var(--text-dark);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+      margin: 10px auto 0 auto;
+      border-radius: 2px;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    .about-text ul {
+      list-style-type: none;
+      margin-top: 1rem;
+    }
+
+    .about-text ul li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .about-text ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Services Section */
+    .services-bg {
+      background-color: #ffffff;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background-color: var(--bg-light);
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    /* Why Choose Section */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .why-card {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+      border-left: 4px solid var(--primary);
+    }
+
+    .why-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    /* FAQ Section */
+    .faq-bg {
+      background-color: #ffffff;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px 25px;
+      background-color: var(--bg-light);
+    }
+
+    .faq-item h3 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info {
+      background-color: #ffffff;
+      padding: 35px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-info ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .contact-info ul li {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    .contact-info ul li strong {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      border-radius: 10px;
+    }
+
+    /* Keywords Section */
+    .keywords-section {
+      background-color: var(--bg-light);
+      padding: 40px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .keywords-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .keyword-tag {
+      background-color: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--text-dark);
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-wrapper {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        gap: 15px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#home" class="logo-brand">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlu6zRN1lP8n0bAPx9YfOr9Bn9wRx-IMUay8nP10ce56AJEvNDMlgqmk-lHLTxMSCQVCTb1-WCmTKb7Ve0M57gq5NkbP7znrMPgObTZijlN-9MPLRqeWYakfBALeVn4elxJPQKSCN6yVz7bwWyMmqi1cPEf0vOLBeRiPJn5BKWAR1w0lftwv3ocOPICY22/s320/Dental%20Implants.jpg" alt="Best Implants NJ Logo">
+        <span>Best Implants NJ</span>
+      </a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="tel:862-267-9535" class="header-cta">Call 862-267-9535</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Premier Dental Implants in Lyndhurst, NJ</h1>
+        <p>Restore your smile with top-rated <strong>Dental Implants</strong>, Same Day Implants, and Full Mouth Restorations. Personalized care from leading dental implant specialists.</p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">Our Services</a>
+          <a href="#contact" class="btn btn-secondary">Schedule Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Best Implants NJ</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Welcome to <strong>Best Implants NJ</strong>, your premier destination for advanced dental restorations in Lyndhurst, New Jersey. Under the direction of experienced practitioners, we specialize in high-quality <a href="http://drdoktorman.com/"><strong>Dental Implants</strong></a> designed to look, feel, and function like natural teeth.</p>
+            <p>From single tooth replacements to comprehensive <a href="https://www.google.com/maps?cid=9787338241471045738"><strong>Full Mouth Implants</strong></a>, our state-of-the-art facility utilizes modern technology and gentle techniques to ensure long-lasting results and maximum patient comfort.</p>
+            <ul>
+              <li>Tailored, patient-centered treatment plans</li>
+              <li>Advanced 3D imaging & precision placement</li>
+              <li>Flexible financing & affordable implant solutions</li>
+            </ul>
+          </div>
+          <div class="about-image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMW-wsibU14RM2WQUaAcaSWEUsDsUYIpJG7UViBiOsGGMbbEgl2OBun5ZYzHDH8uH0Jco0xFFO03KJ0VqG-i5zSOWAZr-a46qCh5r0Umh6czYHm6cJBUKzB60kkDQOxRHPlpSf_J0wkKaPG4UvmQx5YtlvDGoWQvuGkV8sqHwUObaebw4GVKiWEksqL2uN/s320/Titanium%20Dental%20Implants.jpg" alt="Titanium Dental Implants">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="services-bg">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Dental Implants</h3>
+            <p>The permanent, golden-standard solution for missing teeth. Our dental implants integrate seamlessly with your jawbone to provide strength and stability.</p>
+          </div>
+          <div class="service-card">
+            <h3>Same Day Dental Implants</h3>
+            <p>Walk in with missing teeth and leave with a complete, fully functional smile in just a single appointment with our immediate load dental implant techniques.</p>
+          </div>
+          <div class="service-card">
+            <h3>All-On-4 & All-On-6 Implants</h3>
+            <p>Restore an entire arch of missing teeth using four or six strategically placed implants to anchor a permanent bridge securely in place.</p>
+          </div>
+          <div class="service-card">
+            <h3>Titanium & Endosteal Implants</h3>
+            <p>High-grade titanium dental implants inserted directly into the jawbone for maximum biocompatibility, durability, and support.</p>
+          </div>
+          <div class="service-card">
+            <h3>Bone Graft Dental Implants</h3>
+            <p>Specialized bone grafting procedures to rebuild jawbone density and volume, ensuring a strong foundation for successful implant placement.</p>
+          </div>
+          <div class="service-card">
+            <h3>Implant Supported Dentures</h3>
+            <p>Upgrade traditional dentures to snap-on or fixed implant-supported dentures for enhanced comfort, speech, and chewing power without slippage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id="why">
+      <div class="container">
+        <h2 class="section-title">Why Choose Best Implants NJ?</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <h4>Experienced Dental Implant Specialist</h4>
+            <p>Our skilled implant dentist team brings years of specialized training, utilizing cutting-edge techniques to ensure high success rates and gentle treatment.</p>
+          </div>
+          <div class="why-card">
+            <h4>Affordable Dental Implants</h4>
+            <p>We believe top-tier oral healthcare should be accessible. We offer competitive pricing, transparent quotes, and flexible financing options for every budget.</p>
+          </div>
+          <div class="why-card">
+            <h4>Comprehensive Full Mouth Solutions</h4>
+            <p>Whether you need a single tooth implant or a full mouth implant reconstruction, we customize every detail to fit your aesthetic and functional goals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-bg">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>What are dental implants and how do they work?</h3>
+            <p>Dental implants are small titanium posts surgically placed into the jawbone to serve as artificial roots for missing teeth. Once healed, custom crowns or bridges are attached to restore natural tooth function and appearance.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Am I a candidate for Same Day Dental Implants or Immediate Load Dental Implants?</h3>
+            <p>Candidates for immediate load or same-day implants typically have sufficient healthy jawbone density and good overall oral health. A comprehensive dental implant consultation and 3D scan will determine if this option is ideal for you.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is the difference between All-On-4 and All-On-6 Implants?</h3>
+            <p>Both options replace a full arch of missing teeth. All-On-4 uses four titanium dental implants for support, while All-On-6 utilizes six implants. All-On-6 provides additional stability and is often recommended for patients with higher bite pressure or larger jaw structures.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What if I don't have enough jawbone for dental implants?</h3>
+            <p>If bone loss has occurred, a bone graft dental implant procedure can rebuild the jawbone structure prior to implant placement, making almost every patient eligible for successful implant therapy.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How much do dental implants cost, and are affordable options available?</h3>
+            <p>Costs vary based on the number of implants, needed prep work like bone grafts, and restoration type. At Best Implants NJ, we provide affordable dental implant solutions and customized payment plans to fit your budget.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p><strong>Business Name:</strong> Best Implants NJ</p>
+            <ul>
+              <li>
+                <strong>Address</strong>
+                429 Valley Brook Ave #10, Lyndhurst, NJ 07071
+              </li>
+              <li>
+                <strong>Phone</strong>
+                <a href="tel:862-267-9535">862-267-9535</a>
+              </li>
+              <li>
+                <strong>Website</strong>
+                <a href="http://drdoktorman.com/" target="_blank" rel="noopener">http://drdoktorman.com/</a>
+              </li>
+              <li>
+                <strong>Consultation</strong>
+                <a href="#contact">Schedule Dental Implant Consultation</a>
+              </li>
+            </ul>
+          </div>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3019.692234471995!2d-74.1230056!3d40.8127564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2571d7a3d5aaf%3A0x87d39c466b7a606a!2sBest%20Implants%20NJ!5e0!3m2!1sen!2s!4v1791523985297!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Keywords Section -->
+    <section class="keywords-section">
+      <div class="container">
+        <h3 style="text-align: center; font-size: 1.1rem; color: var(--text-muted);">Related Searches & Services</h3>
+        <div class="keywords-tags">
+          <span class="keyword-tag">Dental Implants</span>
+          <span class="keyword-tag">Same Day Dental Implants</span>
+          <span class="keyword-tag">All-On-4 Implants</span>
+          <span class="keyword-tag">All-On-6 Implants</span>
+          <span class="keyword-tag">Titanium Dental Implants</span>
+          <span class="keyword-tag">Endosteal Implants</span>
+          <span class="keyword-tag">Bone Graft Dental Implants</span>
+          <span class="keyword-tag">Immediate Load Dental Implants</span>
+          <span class="keyword-tag">Affordable Dental Implants</span>
+          <span class="keyword-tag">Implant Dentist</span>
+          <span class="keyword-tag">Full Mouth Implants</span>
+          <span class="keyword-tag">Dental Implant Specialist</span>
+          <span class="keyword-tag">Single Tooth Implant</span>
+          <span class="keyword-tag">Implant Supported Dentures</span>
+          <span class="keyword-tag">Dental Implant Consultation</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; Best Implants NJ — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
